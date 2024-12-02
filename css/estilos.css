@@ -1,0 +1,1042 @@
+/* Enlazar el css con la libreria de inconos de Font-Awesone 6.6 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+/* Enlazar el CSS con fuentes externas de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color1: #fbf3ea;
+    --color2: #344856;
+    --color3: #FFFFFF;
+    --color4: #212529;
+    --color5: #d9842f;
+    --color6: #000000;
+
+    /* Variables para las tipografias */
+    --fuente1: "Roboto", sans-serif;
+    --fuente2: "Oswald", sans-serif;
+}
+
+/* Afectara a todos los elementos de la pagina HTML (selector universal) */
+* {
+    /* Elimina los margenes y espaciados predeterminados */
+    margin: 0;
+    padding: 0;
+
+    /* Evita que el tamaño de la caja se vea afectado por el padding y el borde */
+    box-sizing: border-box;
+}
+
+/* Existen 3 formas de declarar las reglas de estilos */
+
+/* 1) Selector de estilos para etiquetas HTML */
+
+html {
+    /* Suavizar el desplamiento del scroll en la ventana */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente1);
+    font-size: 18px; /* 1em */
+    line-height: 1.5;
+}
+h1 {color: var(--color1);}
+
+h2 {
+    font-family: var(--fuente2);
+    letter-spacing: 5px;
+    margin-bottom: 1em;
+}
+
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/* Elimina el espacio que aparece debajo del objeto */
+img, iframe, video {
+    display: block;
+}
+
+/* 2) Selector de estilos para identificadores (id) */
+#barra-superior {
+    background-color: var(--color4);
+    color: var(--color3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.8em;
+}
+
+#barra-superior a {
+    color: var(--color3);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+#barra-superior .row {
+    justify-content: space-between; /* Alineacion horizontal */
+    align-items: center; /* Alineacion vertical*/
+}
+
+#cabecera {
+    background-color: var(--color3);
+    color: var(--color2);
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+#nosotros {
+    background-color: var(--color3);
+    color: var(--color4);
+}
+
+#servicios{
+    background-color: var(--color1);
+    color: var(--color4);
+}
+
+#productos {
+    background-color: var(--color3);
+    color: var(--color2);   
+}
+
+#videodecorte {
+    background-color: var(--color3);
+    color: var(--color2);   
+}
+
+#alumnos{
+    background-color: var(--color1);
+    color: var(--color6);
+}
+
+#alumnos .col {
+    text-align: center;
+}
+
+#productos h2 {
+    text-align: center;  /* Centra el texto */
+    margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
+}
+
+#productos p {
+    text-align: center;  /* Centra el texto */
+    margin-bottom: 50px; /* Espacio inferior para separar del contenido siguiente */
+}
+
+#productos .col {
+    text-align: center;
+}
+
+#productos .p {
+    text-align: center;
+}
+
+#productos .row {
+    justify-content: space-between; /* Alineacion horizontal */
+    align-items: center; /* Alineacion vertical */
+}
+
+#productos a{
+    text-decoration: none;
+    color: var(--color4);
+    margin-right: 10px;
+}
+
+#productos i {
+    font-size: 100px;
+}
+
+.productos-boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color5); /* Usando la variable de color definida */
+    color: var(--color3); /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.productos-boton:hover {
+    background-color: var(--color2); /* Color de fondo al pasar el mouse */
+}
+
+
+#productos .col:hover .productos-hijo {
+    opacity: 1; /*Poner visible la caja*/
+}
+
+#productos .productos-padre {
+    position: relative;
+}
+
+#productos .productos-hijo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 0%;
+    background-color: rgba(32, 54, 70, 0.7);
+    color: var(--color3);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;  /*Oculta la caja*/
+    transition: all 0.3s ease-in-out;
+}
+
+.icono-cuadrado {
+    display: flex;
+    justify-content: center;  /* Centra el contenido horizontalmente */
+    align-items: center;      /* Centra el contenido verticalmente */
+    padding: 20px;            /* Espacio alrededor del icono */
+    background-color: #f4f4f4; /* Fondo del cuadrado */
+    border-radius: 5px;       /* Bordes redondeados */
+    width: 150px;             /* Ancho fijo para el cuadrado */
+    height: 150px;            /* Alto fijo para el cuadrado */
+    margin: 0 auto;           /* Centra el cuadrado dentro de su contenedor */
+}
+.icono-cuadrado a {
+    display: block;
+    text-align: center;
+}
+
+.icono-cuadrado i {
+    font-size: 60px;
+    color: #333;
+    transform: translateX(11px);  /* Mueve el icono 10px a la derecha */
+}
+
+.productos-padre {
+    display: flex;
+    flex-direction: column; /* Hace que los elementos se alineen verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Asegura que el texto también esté centrado */
+}
+
+/* Aplica la sombra cuando el mouse pase sobre el icono */
+.icono-cuadrado:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); /* Sombra más notoria al hacer hover */
+}
+
+.centrar-texto-productos {
+    text-align: center;
+}
+
+
+
+#tipodecortes .col:hover .alumno-hijo {
+    opacity: 1; /*Poner visible la caja*/
+}
+
+#tipodecortes .alumno-hijo p{
+    position: absolute;
+    top:calc(50% - 2em);
+
+}
+
+#tipodecortes{
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+#tipodecortes .col {
+    margin-bottom: 30px;
+    
+}
+
+/* #docentes>.contenedor>.row>.col>img{
+    border: 1px solid var(--color4);
+} */
+
+#tipodecortes img {
+    border: 1px solid var(--color4);
+}
+
+#promocion {
+    background-color: var(--color3);
+    color: var(--color4);
+}
+
+#graduacion {
+    /* background-image: url('../imagenes/graduacion.jpg'); */
+    background: linear-gradient(90deg, rgba(32,54,70,0.5) 40%, rgba(43,191,218,0.5) 100%),url('../imagenesbar/imagen8.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* fijar la imagen en la caja */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Ajusta según sea necesario */
+}
+
+.graduacion-boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color5); /* Usando la variable de color definida */
+    color: var(--color3); /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.graduacion-boton:hover {
+    background-color: var(--color4); /* Color de fondo al pasar el mouse */
+}
+
+
+
+#pie {
+    background-color: var(--color4);
+    color: var(--color3);
+}
+
+#pie .row {
+    justify-content: space-between; /* Alineacion horizontal */
+    align-items: center; /* Alineacion vertical */
+}
+
+#pie a{
+    text-decoration: none;
+    color: var(--color3);
+    margin-right: 15px;
+}
+
+#pie i {
+    font-size: 32px;
+}
+
+#titulo-pagina {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    color: var(--color1);
+
+    background: linear-gradient(90deg, rgba(32,54,70,0.5) 40%, rgba(43,191,218,0.5) 100%),url('../imagenesbar/Imagenbar.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#titulo-pagina a{
+    color: var(--color1);
+    text-decoration: none;
+}
+
+
+/* 3) Selector de estilos de tipo clase (class) */
+.espaciado {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.contenedor {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajustar el imagen al ancho de su caja padre */
+.imgfluid {
+    width: 100%;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+/* Activar flexbox */
+.row {
+    display: flex;
+    flex-direction: row; /* Coloca las cajas hijo en fila */
+    flex-wrap: wrap; /* Habilita la caja flexbox multilfila */
+}
+
+.del-padded {
+        /* Anular el padding-left y padding- right, de la primera y ultima columna, respectivamente */
+        margin-left: -15px;
+        margin-right: -15px;
+}
+
+.col {
+    /* Permite que las cajas hijo tengan el mismo ancho */
+    flex-basis: 0;
+    flex-grow: 1;
+
+    /* Espacio entre columnas */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.col-20 {
+    flex-basis: 20%;
+    max-width: 20;
+}
+
+.col-25 {
+    flex-basis: 25%;
+    max-width: 25;
+}
+
+.col-33 {
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+}
+
+.col-50 {
+    flex-basis: 50%;
+    max-width: 50%;
+}
+
+.col-66 {
+    flex-basis: 66.66%;
+    max-width: 66.66%;
+}
+
+.col-75 {
+    flex-basis: 75%;
+    max-width: 75%;
+}
+
+.col-100 {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.fondo-promocion {
+    background-image: url('../imagenesbar/local.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+
+.texto-graduacion {
+    font-size: 2em;
+    line-height: 1.5em;
+    color: var(--color3);
+}
+
+.texto-resaltado {
+    color: var(--color5);
+    font-weight: bold;
+    font-family: var(--fuente2);
+    text-transform: uppercase;
+}
+
+
+/* ESTILOS PARA FORMATEAR LA BARRA DE NAVEGACION */
+
+/* Barra de navegacion */
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Alineacion horizontal */
+    align-items: center; /* Alineacion vertical */
+}
+
+/* Ajusta el tamaño del logo */
+.nav-logo {
+    width: 200px;
+}
+
+/* Barra de menu */
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none; /* Quita el marcador de viñetas */
+}
+
+/*Elementos del menu  */
+.nav-menu-item {
+    margin-left: 10px;
+}
+
+/* Enlaces individuales del menu */
+.nav-menu-link {
+    text-decoration: none; /* Quita el subrayado */
+    color:var(--color6) ;
+    padding: 10px;
+}
+
+.nav-menu-link:hover {
+    background-color: var(--color4);
+    color: var(--color3);
+}
+
+/* ESTILOS PARA POSICIONAMIENTO DE CAJAS */
+
+.banner-padre {
+    position: relative;
+}
+
+.banner-hijo {
+    position: absolute;
+    width: 600px;
+    background-color: var(--color3);
+    color: var(--color2);
+    padding: 20px;
+
+    /* Coordenadas de posicion de la caja: top, bottom, left, right */
+    /* top: 0;
+    left: 0; */
+
+    /* right: 0px;
+    bottom: 0px; */
+
+    left: calc(50% - 300px);
+    bottom: -80px;
+}
+
+
+.alumno-padre {
+    position: relative;
+}
+
+.alumno-hijo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 54, 70, 0.7);
+    color: var(--color3);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;  /*Oculta la caja*/
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll-up {
+    width: 45px;
+    height: 45px;
+    background-color: var(--color2);
+    color: var(--color3);
+    text-align: center;
+    line-height: 45px;
+    font-size: 1em;
+    border: 1px solid var(--color3);
+
+    /* Posicionamiento del botón */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+
+.pagina-activa {
+    background-color: var(--color2);
+    color: var(--color3);
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px 0px;
+    font: inherit; /*Herede la fuente de su caja padre*/
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color2);
+}
+
+
+.form-contacto a {
+    text-decoration: none;
+    color: var(--color5);
+}
+
+.form-button {
+    margin-top: 20px;
+    background-color: var(--color5);
+    color: var(--color1);
+    padding: 10px 20px;
+    font: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.form-contacto textarea {
+    resize: vertical;
+}
+
+.ajuste-mapa {
+    width: 100%;
+}
+
+.ajuste-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /*Mantiene la relacion de aspecto 16/9*/
+}
+
+.video-padre {
+    position: relative;
+}
+
+.video-hijo {
+    position: absolute;
+    top: 100px;
+    left:50px;
+
+    /* Formato */
+    width: 500px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+
+.titulo-video {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contenido-video {
+    display: flex;
+    align-items: center; /* Alinea icono y texto en una fila */
+}
+
+.icono-video {
+    font-size: 40px;
+    color: var(--color5);
+    margin-right: 15px;
+}
+
+.texto-video {
+    display: flex;
+    flex-direction: column;
+}
+
+#videodecorte .h3 {
+    margin-bottom: 10px;
+}
+
+.col-100 {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px; /* Espaciado entre secciones */
+}
+
+.col.col-50 .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegura que la columna ocupe toda la altura disponible */
+}
+
+.ajuste-video {
+    max-width: 100%; /* Asegura que el video sea responsivo */
+    height: auto;    /* Ajusta la altura proporcionalmente */
+}
+
+#contactanos-formulario .row {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la fila */
+    align-items: center; /* Centra verticalmente la fila */
+    height: 100vh; /* Utiliza el alto total de la vista para asegurar el centrado */
+}
+
+/* Estilo para la segunda columna */
+#contactanos-formulario .col-33 {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos de la columna de arriba hacia abajo */
+    align-items: center; /* Centra los elementos horizontalmente dentro de la columna */
+    justify-content: center; /* Centra los elementos verticalmente dentro de la columna */
+    padding: 22px; /* Espaciado interno */
+    box-sizing: border-box; /* Asegura que el padding esté incluido en el ancho total */
+    width: 100%; /* La columna puede ocupar todo el ancho disponible */
+    max-width: 400px; /* Controla el ancho máximo de la columna */
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    border-radius: 30px; /* Bordes redondeados */
+    box-shadow: 0 0px 6px #d9842f; /* Añade sombra para profundidad */
+    text-align: left; /* El texto se alinea a la izquierda */
+    height: auto; /* Ajuste automático de la altura */
+}
+
+/* Estilo de los elementos dentro de la columna */
+.contacto-info {
+    margin-top: 20px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contacto-item i {
+    font-size: 2.1rem;
+    color: #007BFF;
+}
+
+.contacto-item h4 {
+    margin: 0 0 10px 0;
+}
+
+.contacto-item p {
+    margin: 50;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Estilo general para el pie de página */
+#contacto-social {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+        margin-top: 10px;
+    flex-direction: column; /* Hace que los elementos se alineen verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    position: relative;
+}
+
+/* Contenedor que limita el ancho */
+#contacto-social .contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Distribución en columnas */
+#contacto-social .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Estilo de cada columna */
+.columna {
+    flex: 1; /* Asegura que cada columna ocupe el mismo espacio */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Aseguramos que los iconos tengan un buen tamaño */
+.columna a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+}
+
+.columna a:hover {
+    color: #ffcc00;
+}
+
+/* Aseguramos que las columnas con más de un ícono se vean alineadas */
+.columna:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna:last-child a {
+    margin: 0 10px; /* Aumentar el margen entre los iconos */
+}
+
+/* Estilo para los títulos h2 */
+#promocion h2 {
+    font-family: 'Poppins', sans-serif; /* Fuente para los títulos */
+    font-weight: 600; /* Peso de la fuente (puedes ajustarlo) */
+    font-size: 2em; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo para los párrafos p */
+#promocion p {
+    font-family: 'Roboto', sans-serif; /* Fuente para los párrafos */
+    font-weight: 400; /* Peso de la fuente */
+    font-size: 1em; /* Tamaño de fuente */
+    color: #555; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilo para los precios (si quieres un estilo diferente) */
+#promocion .precio {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #e74c3c; /* Un color rojo para destacar el precio */
+}
+
+
+/* ESTILOS PARA EL MENU RESPONSIVE */
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 2em;
+    color: transparent;
+}
+
+/* Estilo que muestra y oculta la barra de menu al dar clic sobre el menu-taggle */
+.nav-active {
+    display: flex!important; /* Alinear el menu verticalmente */
+}
+
+
+/* ESTILOS PARA EL CARRUSEL */
+.carousel-container {
+    position: relative; /* Para posicionar los botones de control */
+    width: 100%;         /* Ancho relativo para responsividad */
+    max-width: 100%;   /* Ancho máximo */
+    overflow: hidden;
+}
+
+
+.carousel {
+    display: flex; /* Los elementos del carrusel estarán en fila */
+    transition: transform 0.3s ease-in-out; /* Animación suave entre transiciones */
+}
+
+.carousel-item {
+    min-width: 100%; /* Cada imagen ocupa el ancho completo del carrusel */
+    display: none;   /* Ocultar por defecto */
+}
+
+
+.carousel-item.active {
+    display: block; /* Mostrar la imagen activa */
+}
+
+.carousel-control {
+    position: absolute; /* Posicionar sobre el carrusel */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajuste exacto del centro */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de mano */
+    z-index: 10; /* Colocar sobre las imágenes */
+    font-size: 18px; /* Tamaño del texto */
+    border-radius: 50%; /* Forma circular */
+}
+ /* Posición del botón "anterior" */
+ .carousel-control.prev {
+    left: 10px; /* A la izquierda */
+}
+  /* /* Posición del botón "siguiente" * */
+  .carousel-control.next {
+    right: 10px; /* A la derecha */
+}
+
+
+/* ESTILOS PARA DISEÑO WEB RESPONSIVE EN DIFERENTES TAMAÑOS DE DISPOSITIVOS */
+
+/* 1) PARA PANTALLAS GRANDES O DE ESCRITORIO (hasta 1200px) */
+@media screen and (max-width:1200px){
+    .contenedor {
+        max-width: 80%;
+    }
+}
+
+/* 2) PARA PANTALLAS PEQUEÑAS O DE LAPTOPS (hasta 1024px) */
+@media screen and (max-width:1024px){
+    .contenedor {
+        max-width: 85%;
+    }
+
+    
+    #videodecorte .col-50{
+        padding-top: 30px; /* agrega espacio interno en la parte superior para separar su contenido. */
+        flex-basis: 100%; /* asegura que el elemento ocupe todo el ancho disponible en el contenedor. */
+        max-width: 100%;  /* evita que el elemento exceda el ancho del contenedor, manteniéndolo dentro de los límites. */
+    }
+
+    #contacto-social {
+        background-color: #333;
+        color: white;
+        padding: 40px 0;
+            margin-top: 370px; /* Crea separación entre el elemento y otros elementos que están por encima. */
+        flex-direction: column; /* Hace que los elementos se alineen verticalmente */
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        text-align: center;
+        position: relative;
+    }
+
+    #tipodecortes .col-33{
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+}
+
+/* 3) PARA PANTALLAS DE TABLETAS (hasta 768px) */
+@media screen and (max-width:768px){
+        #barra-superior {
+        font-size: 0.6em;
+    }
+
+    #videodecorte .col-50{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    
+    #alumnos .col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    #contacto-social {
+        background-color: #333;
+        color: white;
+        padding: 40px 0;
+            margin-top: 370px; /* Crea separación entre el elemento y otros elementos que están por encima. */
+        flex-direction: column; /* Hace que los elementos se alineen verticalmente */
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        text-align: center;
+        position: relative;
+    }
+    
+    .contenedor {
+        max-width: 90%;
+    }
+
+    .texto-graduacion {
+        font-size: 2em;
+    }
+
+    .video-hijo {
+        position: static;
+        width: 100%;
+    }
+    
+    #postgrado-video-streaming .col {
+        flex-basis: 100%;
+    }
+
+    #contactanos-formulario .col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    
+    #contacto-info .col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    /*Activo el menu responsive a partir de pantalla de tableta*/    
+    .menu-toggle {
+        display: block;
+        color: var(--color2);
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 88px;
+        right: 0px;
+
+        background-color:var(--color4);
+        width: 60%;
+        text-align: center;
+        padding: 10px 0px;
+    }
+
+    .nav-menu-link {
+        display: block;
+        padding: 10px;
+    }
+
+    .nav-menu-item {
+        padding: 5px;
+    }
+}
+
+/* 4) PARA PANTALLAS DE CELULARES (hasta 480px) */
+@media screen and (max-width:480px){
+    .contenedor {
+        max-width: 95%;
+    }
+
+    #videodecorte .col-50{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    #productos .col {
+        flex-basis: 100%;
+        max-width: 100%;    
+    }
+
+
+    #contacto-social {
+        background-color: #333;
+        color: white;
+        padding: 40px 0;
+            margin-top: 370px; /* Crea separación entre el elemento y otros elementos que están por encima. */
+        flex-direction: column; /* Hace que los elementos se alineen verticalmente */
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra el contenido horizontalmente */
+        text-align: center;
+        position: relative;
+    }
+
+    #contactanos-formulario .col-33{
+        flex-direction: column; /* Hace que los elementos se alineen verticalmente */
+        
+    }
+    
+    #barra-superior {
+        font-size: 0.6em;
+    }
+
+    #barra-superior .row {
+        flex-direction: column;
+    }
+
+    #alumnos .col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    #tipodecortes .col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    #pie .row {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .espaciado {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+}
+
+

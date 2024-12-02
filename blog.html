@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Para utilizar la tabla de caracteres del idioma español -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BARBER SHR</title> <!-- Es el titulo que aparecera en la pestaña del navegador -->
+
+    <!-- Enlazar el HTML con el favicon -->
+     <link rel="shortcut icon" href="imagenesbar/favicon-b1.ico" type="image/x-icon">
+
+    <!-- Enlazar el HTML con una hoja de estilos css externa -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header id="barra-superior">
+        <div class="contenedor">
+            <div class="row">
+                <div class="bs-contactos">
+                    <a href="tel:(01) 315 9601"> <i class="fa-solid fa-phone"></i> (01) 315 9601</a>    
+                    <a href="mailto:jhonpreciadomio24@gmail.com"><i class="fa-solid fa-envelope"></i> Barbershop@gmail.com</a>
+                    <span> <i class="fa-solid fa-clock"></i> Lun - Sab: 8:30 a.m. a 8:00 p.m.</span>
+                </div>
+
+                <div class="bs-rs">
+                    <a target="_blank" href="https://web.facebook.com/BarbershopMovie"><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://co.linkedin.com/company/barbershop.12"><i class="fa-brands fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@NavajasBarberShop"><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/b4barbershop/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header id="cabecera">
+        <div class="contenedor">
+            <!-- Barra de navegacion -->
+             <nav class="nav-bar">
+                <!-- Logo de la empresa -->
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="imagenesbar/logodelabarberia.jpg" alt="" class="imgfluid">
+                    </a>
+                 </div> <!-- fin de nav-logo -->
+
+                 <!-- Icono del menu hamburguesa (menu responsive) -->
+                 <div class="menu-toggle" id="mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                 </div>                 
+
+                 <!-- Barra de menu -->
+                 <ul class="nav-menu" id="nav-menu">
+                    <!-- Elementos de menu -->
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link pagina-activa" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="ubicacion.html">Ubicacion</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="contactanos.html">Contactanos</a>
+                    </li>
+                 </ul> <!-- fin de nav-menu -->
+             </nav> <!-- fin de nav-bar -->
+        </div>
+    </header>
+
+    <!-- Titulo de pagina -->
+    <section id="titulo-pagina">
+        <div class="contenedor">
+            <h2>Blog</h2>
+            <span> <i class="fa-solid fa-location-dot"></i> <a href="index.html">Inicio</a> / Blog</span>
+        </div>
+    </section>
+
+
+
+    <footer id="pie" class="espaciado">
+        <div class="contenedor">
+            <div class="row">
+                <span> © BARBERSHOP 2024 - Todos los derechos reservados</span>    
+                <div class="pie-rs">
+                    <a target="_blank" href="https://web.facebook.com/BarbershopMovie"><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://co.linkedin.com/company/barbershop.12"><i class="fa-brands fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@NavajasBarberShop"><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/b4barbershop/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botón para realizar un scroll-up-->
+        <a href="#" class="scroll-up">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+
+        <!-- Enlazar el HTML con el JS toggle-menu -->
+        <script src="js/toggle-menu.js"></script>        
+</body>
+</html>

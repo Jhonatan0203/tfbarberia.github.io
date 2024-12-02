@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Para utilizar la tabla de caracteres del idioma español -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BARBER SHR</title> <!-- Es el titulo que aparecera en la pestaña del navegador -->
+
+    <!-- Enlazar el HTML con el favicon -->
+     <link rel="shortcut icon" href="imagenesbar/favicon-b1.ico" type="image/x-icon">
+
+    <!-- Enlazar el HTML con una hoja de estilos css externa -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header id="barra-superior">
+        <div class="contenedor">
+            <div class="row">
+                <div class="bs-contactos">
+                    <a href="tel:(01) 315 9601"> <i class="fa-solid fa-phone"></i> (01) 315 9601</a>    
+                    <a href="mailto:jhonpreciadomio24@gmail.com"><i class="fa-solid fa-envelope"></i> Barbershop@gmail.com</a>
+                    <span> <i class="fa-solid fa-clock"></i> Lun - Sab: 8:30 a.m. a 8:00 p.m.</span>
+                </div>
+
+                <div class="bs-rs">
+                    <a target="_blank" href="https://web.facebook.com/BarbershopMovie"><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://co.linkedin.com/company/barbershop.12"><i class="fa-brands fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@NavajasBarberShop"><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/b4barbershop/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header id="cabecera">
+        <div class="contenedor">
+            <!-- Barra de navegacion -->
+             <nav class="nav-bar">
+                <!-- Logo de la empresa -->
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="imagenesbar/logodelabarberia.jpg" alt="" class="imgfluid">
+                    </a>
+                 </div> <!-- fin de nav-logo -->
+
+                 <!-- Icono del menu hamburguesa (menu responsive) -->
+                 <div class="menu-toggle" id="mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                 </div>
+
+                 <!-- Barra de menu -->
+                 <ul class="nav-menu" id="nav-menu">
+                    <!-- Elementos de menu -->
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="ubicacion.html">Ubicacion</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link pagina-activa" href="contactanos.html">Contactanos</a>
+                    </li>
+                 </ul> <!-- fin de nav-menu -->
+             </nav> <!-- fin de nav-bar -->
+        </div>
+    </header>
+
+    <!-- Titulo de pagina -->
+    <section id="titulo-pagina">
+        <div class="contenedor">
+            <h2>Contactanos</h2>
+            <span> <i class="fa-solid fa-location-dot"></i> <a href="index.html">Inicio</a> / Contactanos</span>
+        </div>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contactanos-formulario" class="espaciado">
+        <div class="contenedor">
+            <h3>Formulario de contacto</h3>
+            <h2>TE RESPONDEREMOS PRONTO</h2>
+
+            <div class="row del-padded">
+                <div class="col col-66">
+                    <!-- Objeto formulario -->
+                    <form action="registro-contacto.php" method="post" class="form-contacto">
+                        <!-- Flexbox del formulario -->
+                         <div class="row del-padded">
+                             <!-- Fila 1 -->
+                             <div class="col col-50">
+                                <input class="form-control" type="text" placeholder="Nombre" name="nombre" id="nombre" required>
+                             </div>
+                             <div class="col col-50">
+                                <input class="form-control" type="text" placeholder="Apellido" name="apellido" id="nombre" required>
+                             </div>
+
+                             <!-- Fila 2 -->
+                              <div class="col col-50">
+                                <input class="form-control" type="email" placeholder="Correo electrónico" name="correo" id="correo" required>
+                              </div>
+                              <div class="col col-50">
+                                <input class="form-control" type="tel" placeholder="Teléfono" name="telefono" id="telefono" required>
+                              </div>
+
+                             <!-- Fila 3 -->
+                              <div class="col col-100">
+                                <textarea class="form-control" name="mensaje" id="mensaje" placeholder="Mensaje" required rows="2"></textarea>
+                              </div>
+
+                              <!-- Fila 4 -->
+                               <div class="col col-100">
+                                <input class="form-control" type="text" name="captcha" id="captcha" placeholder="Captcha: 3 + 4 = ?" required>
+                               </div>
+
+                               <!-- Fila 5 -->
+                                <div class="col col-100">
+                                    <input type="checkbox" required name="acuerdo" id="acuerdo"> 
+                                    <label for="acuerdo">
+                                        He leido los <a target="_blank" href="https://thebarbercompany.pe/terminosycondiciones/">terminos y condiciones</a> de privacidad acerca del tratamiento de mis datos personales
+                                    </label>
+                                </div>
+
+                                <!-- Fila 6 -->
+                                <div class="col col-100">
+                                    <button class="form-button" type="submit">Enviar mensaje <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                         </div>
+                    </form>
+                </div>
+
+                <div class="col col-33">
+                    <h3>Contáctanos</h3>
+                    <div class="contacto-info">
+                        <div class="contacto-item">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Tda 67, Centro Comercial San Felipe, Jesús María 15076</p>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+51 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="contacto-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contacto@thebarbercompany.pe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer id="contacto-social" class="espaciado">
+            <div class="contenedor">
+                <div class="row del-padded">
+                    <div class="columna">
+                        <a target="_blank" href="https://web.facebook.com/BarbershopMovie"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="columna">
+                        <a target="_blank" href="https://co.linkedin.com/company/barbershop.12"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <div class="columna">
+                        <a target="_blank" href="https://www.youtube.com/@NavajasBarberShop"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="columna">
+                        <a target="_blank" href="https://www.instagram.com/b4barbershop/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Mapa de ubicacion -->
+    <section id="contactanos-mapa">
+        <iframe class="ajuste-mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3654701390633!2d-77.05593556165698!3d-12.087113864032267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c904fd93caa7%3A0xa7ffebaa4b543106!2sThe%20Barber%20Company%20-%20Jes%C3%BAs%20Mar%C3%ADa!5e0!3m2!1ses!2spe!4v1731640158761!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>    
+
+    <footer id="pie" class="espaciado">
+        <div class="contenedor">
+            <div class="row">
+                <span> © BARBERSHOP 2024 - Todos los derechos reservados</span>    
+                <div class="pie-rs">
+                    <a target="_blank" href="https://web.facebook.com/BarbershopMovie"><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://co.linkedin.com/company/barbershop.12"><i class="fa-brands fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@NavajasBarberShop"><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/b4barbershop/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botón para realizar un scroll-up-->
+        <a href="#" class="scroll-up">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+
+        <!-- Enlazar el HTML con el JS toggle-menu -->
+        <script src="js/toggle-menu.js"></script>        
+</body>
+</html>

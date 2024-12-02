@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Para utilizar la tabla de caracteres del idioma español -->
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BARBER SHR</title> <!-- Es el titulo que aparecera en la pestaña del navegador -->
+
+    <!-- Enlazar el HTML con el favicon -->
+     <link rel="shortcut icon" href="imagenesbar/favicon-b1.ico" type="image/x-icon">
+
+    <!-- Enlazar el HTML con una hoja de estilos css externa -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header id="barra-superior">
+        <div class="contenedor">
+            <div class="row">
+                <div class="bs-contactos">
+                    <a href="tel:(01) 315 9601"> <i class="fa-solid fa-phone"></i> (01) 315 9601</a>    
+                    <a href="mailto:jhonpreciadomio24@gmail.com"><i class="fa-solid fa-envelope"></i> Barbershop@gmail.com</a>
+                    <span> <i class="fa-solid fa-clock"></i> Lun - Sab: 8:30 a.m. a 8:00 p.m.</span>
+                </div>
+
+                <div class="bs-rs">
+                    <a target="_blank" href="https://web.facebook.com/BarbershopMovie"><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://co.linkedin.com/company/barbershop.12"><i class="fa-brands fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@NavajasBarberShop"><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/b4barbershop/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header id="cabecera">
+        <div class="contenedor">
+            <!-- Barra de navegacion -->
+             <nav class="nav-bar">
+                <!-- Logo de la empresa -->
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="imagenesbar/logodelabarberia.jpg" alt="" class="imgfluid">
+                    </a>
+                 </div> <!-- fin de nav-logo -->
+
+                 <!-- Icono del menu hamburguesa (menu responsive) -->
+                 <div class="menu-toggle" id="mobile-menu">
+                    <i class="fa-solid fa-bars"></i>
+                 </div>
+
+                 <!-- Barra de menu -->
+                 <ul class="nav-menu" id="nav-menu">
+                    <!-- Elementos de menu -->
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link pagina-activa" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="ubicacion.html">Ubicacion</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-menu-link" href="contactanos.html">Contactanos</a>
+                    </li>
+                 </ul> <!-- fin de nav-menu -->
+             </nav> <!-- fin de nav-bar -->
+        </div>
+    </header>
+
+    <!-- Titulo de pagina -->
+    <section id="titulo-pagina">
+        <div class="contenedor">
+            <h2>Galeria</h2>
+            <span> <i class="fa-solid fa-location-dot"></i> <a href="index.html">Inicio</a> / Galeria</span>
+        </div>
+    </section>
+
+    <!-- Video local o interno -->
+    <section id="postgrado-video-interno">
+        <div class="video-padre">
+            <!-- Objeto video -->
+            <video  muted autoplay loop class="ajuste-video">
+                <source src="videos/video-barberia.mp4" type="video/mp4">
+            </video>            
+            <div class="video-hijo">
+                <h3>Barbershop</h3>
+                <p>"El Refugio del Estilo y la Elegancia Barbería & Spa Masculino"</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Videos de los locales de la barberia -->
+    <section id="postgrado-video-streaming" class="espaciado">
+        <div class="contenedor">
+            <h2>Servicios de Barbería: Promo Video y Corte Completo</h2>
+            <p>Una herramienta visual que muestra los servicios y el ambiente de la barbería, destacando la calidad y profesionalismo de los cortes de cabello, así como la experiencia que ofrece el establecimiento.</p>
+            <div class="row del-padded">
+                <div class="col">
+                    <!-- Youtube -->
+                    <iframe class="ajuste-video" width="560" height="315" src="https://www.youtube.com/embed/sL3iCtFga3Q?si=0Q5IKfKmcJErjFTo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h3>Barbershop Promo Video</h3>
+                    <p>Un Barbershop Promo Video es un video promocional diseñado para destacar los servicios, el ambiente y la experiencia de un barbershop (peluquería o barbería). Suele incluir imágenes del establecimiento, el trabajo de los barberos, clientes satisfechos y promociones especiales. </p>
+                </div>
+                <div class="col">
+                    <!-- Vimeo -->
+                    <div class="ajuste-video" style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/370386864?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="BARBERIA_2"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                    <h3>Corte, barba y bigote</h3>
+                    <p>El corte, barba y bigote es un servicio integral en las barberías que combina el corte de cabello con el arreglo de la barba y el bigote. Este servicio permite a los clientes no solo mantener un corte moderno o clásico de cabello, sino también lucir una barba y un bigote bien cuidados, con forma y estilo personalizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer id="pie" class="espaciado">
+        <div class="contenedor">
+            <div class="row">
+                <span> © BARBERSHOP 2024 - Todos los derechos reservados</span>    
+                <div class="pie-rs">
+                    <a target="_blank" href="https://web.facebook.com/BarbershopMovie"><i class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://co.linkedin.com/company/barbershop.12"><i class="fa-brands fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@NavajasBarberShop"><i class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/b4barbershop/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botón para realizar un scroll-up-->
+        <a href="#" class="scroll-up">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+
+        <!-- Enlazar el HTML con el JS toggle-menu -->
+        <script src="js/toggle-menu.js"></script>        
+</body>
+</html>
